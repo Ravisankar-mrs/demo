@@ -2,21 +2,15 @@ package com.example.demo.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "employee")
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@Setter
-//@Getter
 public class EmployeeEntity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "emp_id")
 	private int empId;
 	
 	@Column(name = "emp_name")
@@ -71,9 +65,4 @@ public class EmployeeEntity {
 	public void setEmpSalary(int empSalary) {
 		this.empSalary = empSalary;
 	}
-
-
-
-
-
 }
